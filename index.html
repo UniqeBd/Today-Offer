@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive Free Rewards | Claim Your Offers Today</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #ff4d4d, #ff9966);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        
+        /* Offer Grid Styles */
+        .offer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .offer-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+        
+        .offer-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .offer-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .offer-content {
+            padding: 20px;
+        }
+        
+        .offer-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #ff4d4d;
+        }
+        
+        .offer-content p {
+            margin-bottom: 15px;
+            color: #666;
+        }
+        
+        .offer-button {
+            display: block;
+            background: linear-gradient(135deg, #ff4d4d, #ff9966);
+            color: white;
+            text-align: center;
+            padding: 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        
+        .offer-button:hover {
+            background: linear-gradient(135deg, #ff3333, #ff8844);
+        }
+        
+        /* Secondary Offers */
+        .secondary-offers {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        /* Countdown Timer */
+        .countdown {
+            background: #333;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+        }
+        
+        .countdown span {
+            font-weight: bold;
+            color: #ff9966;
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: #ccc;
+            padding: 20px;
+            font-size: 0.8rem;
+            text-align: center;
+            border-radius: 5px;
+        }
+        
+        footer a {
+            color: #ff9966;
+            text-decoration: none;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .offer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .secondary-offers {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 500px;
+            position: relative;
+        }
+        
+        .close {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .email-form {
+            margin-top: 20px;
+        }
+        
+        .email-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .email-form button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #ff4d4d, #ff9966);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ABSOLUTELY FREE!</h1>
+            <p>Limited Time Offers - Claim Yours Today</p>
+        </header>
+        
+        <div class="countdown">
+            Today's entries will expire in: <span id="timer">20:08:13</span>
+        </div>
+        
+        <div class="offer-grid">
+            <!-- iOS Offer -->
+            <div class="offer-card">
+                <img src="https://via.placeholder.com/400x200?text=Free+Samples" alt="Free Samples" class="offer-image">
+                <div class="offer-content">
+                    <h3>FREE SAMPLES</h3>
+                    <p>Get your free samples today! No credit card required.</p>
+                    <a href="https://singingfiles.com/show.php?l=0&u=2273062&id=68777" class="offer-button" id="ios-offer">GET MY FREE SAMPLES</a>
+                </div>
+            </div>
+            
+            <!-- Windows PC Offer -->
+            <div class="offer-card">
+                <img src="https://via.placeholder.com/400x200?text=iPhone+16+Pro" alt="iPhone 16 Pro" class="offer-image">
+                <div class="offer-content">
+                    <h3>WIN AN IPHONE 16 PRO</h3>
+                    <p>Enter for your chance to win the latest iPhone!</p>
+                    <a href="https://singingfiles.com/show.php?l=0&u=2273062&id=67277" class="offer-button" id="windows-offer">WIN IPHONE 16 PRO</a>
+                </div>
+            </div>
+            
+            <!-- Android Offer -->
+            <div class="offer-card">
+                <img src="https://via.placeholder.com/400x200?text=$750+Temu+Gift+Card" alt="$750 Temu Gift Card" class="offer-image">
+                <div class="offer-content">
+                    <h3>$750 TEMU GIFT CARD</h3>
+                    <p>Claim your gift card today!</p>
+                    <a href="https://singingfiles.com/show.php?l=0&u=2273062&id=67722" class="offer-button" id="android-offer">CLAIM $750 CARD</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="secondary-offers">
+            <!-- Vacation Offer -->
+            <div class="offer-card">
+                <img src="https://via.placeholder.com/600x200?text=Caribbean+Getaway" alt="Caribbean Vacation" class="offer-image">
+                <div class="offer-content">
+                    <h3>CARIBBEAN GETAWAY</h3>
+                    <p>Win a dream vacation to the Caribbean!</p>
+                    <a href="https://singingfiles.com/show.php?l=0&u=2273062&id=69297" class="offer-button">WIN VACATION</a>
+                </div>
+            </div>
+            
+            <!-- Wendy's Offer -->
+            <div class="offer-card">
+                <img src="https://via.placeholder.com/600x200?text=$500+Wendy's+Gift+Card" alt="$500 Wendy's Gift Card" class="offer-image">
+                <div class="offer-content">
+                    <h3>$500 WENDY'S GIFT CARD</h3>
+                    <p>Get your gift card now!</p>
+                    <a href="https://singingfiles.com/show.php?l=0&u=2273062&id=68657" class="offer-button">GET $500 CARD</a>
+                </div>
+            </div>
+            
+            <!-- General Samples -->
+            <div class="offer-card">
+                <img src="https://via.placeholder.com/600x200?text=Free+Samples" alt="Free Samples" class="offer-image">
+                <div class="offer-content">
+                    <h3>FREE SAMPLES</h3>
+                    <p>See the samples you can get today!</p>
+                    <a href="https://singingfiles.com/show.php?l=0&u=2273062&id=68776" class="offer-button">GET FREE SAMPLES</a>
+                </div>
+            </div>
+            
+            <!-- Walmart Offer -->
+            <div class="offer-card">
+                <img src="https://via.placeholder.com/600x200?text=Walmart+Gift+Card" alt="Walmart Gift Card" class="offer-image">
+                <div class="offer-content">
+                    <h3>WALMART GIFT CARD</h3>
+                    <p>Win up to $2,000 instantly!</p>
+                    <a href="https://singingfiles.com/show.php?l=0&u=2273062&id=68831" class="offer-button">WIN $2000 CARD</a>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>*By claiming offers, you agree to receive promotional emails. Gift cards require survey completion. No purchase necessary. iPhone is a registered trademark of Apple Inc. This site is not endorsed by or affiliated with mentioned brands. Void where prohibited. Winners responsible for taxes. See full <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>
+        </footer>
+    </div>
+    
+    <!-- Email Capture Modal -->
+    <div id="emailModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>CONGRATS!!!</h2>
+            <h3>YOU QUALIFY FOR FREE SAMPLES</h3>
+            <p>PAYMENT DUE: <strong>$0.00</strong></p>
+            <p>SHIPPING COST: <strong>$0.00</strong></p>
+            <p>TOTAL: <strong>FREE!</strong></p>
+            <p>Hurry! Limited time offer. While supplies last.</p>
+            
+            <div class="email-form">
+                <input type="email" placeholder="Your Email Address" required>
+                <button id="submitEmail">GET MY FREE SAMPLES</button>
+            </div>
+            
+            <p style="font-size: 0.8rem; margin-top: 10px;">By clicking above, I agree to receive emails and accept the <a href="#">terms</a>.</p>
+        </div>
+    </div>
+    
+    <script>
+        // Countdown Timer
+        function startTimer(duration, display) {
+            let timer = duration, hours, minutes, seconds;
+            setInterval(function () {
+                hours = parseInt(timer / 3600, 10);
+                minutes = parseInt((timer % 3600) / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+                
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+                
+                display.textContent = hours + ":" + minutes + ":" + seconds;
+                
+                if (--timer < 0) {
+                    timer = duration;
+                }
+            }, 1000);
+        }
+        
+        window.onload = function () {
+            const twentyMinutes = 20 * 60 + 8; // 20 minutes and 8 seconds
+            const display = document.querySelector('#timer');
+            startTimer(twentyMinutes, display);
+        };
+        
+        // Modal Functionality
+        const modal = document.getElementById("emailModal");
+        const span = document.getElementsByClassName("close")[0];
+        const iosOffer = document.getElementById("ios-offer");
+        const windowsOffer = document.getElementById("windows-offer");
+        const androidOffer = document.getElementById("android-offer");
+        
+        // When user clicks on any offer, open the modal
+        iosOffer.onclick = function(e) {
+            e.preventDefault();
+            modal.style.display = "block";
+            return false;
+        }
+        
+        windowsOffer.onclick = function(e) {
+            e.preventDefault();
+            modal.style.display = "block";
+            return false;
+        }
+        
+        androidOffer.onclick = function(e) {
+            e.preventDefault();
+            modal.style.display = "block";
+            return false;
+        }
+        
+        // When user clicks on (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        
+        // When user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        
+        // Form submission
+        document.getElementById("submitEmail").onclick = function() {
+            const email = document.querySelector('.email-form input').value;
+            if (email) {
+                alert('Thank you! Check your email to claim your offer.');
+                modal.style.display = "none";
+            } else {
+                alert('Please enter your email address.');
+            }
+        }
+        
+        // Exit Intent Popup
+        document.addEventListener('mouseout', function(e) {
+            if (!e.relatedTarget && e.clientY < 10) {
+                modal.style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>
